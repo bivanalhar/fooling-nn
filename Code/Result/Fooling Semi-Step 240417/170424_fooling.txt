@@ -12,3 +12,13 @@ currently checking for the upper bound 50
 Training Accuracy:88.5527253151percent
 Testing Accuracy:86.9400024414percent
 
+Result of the experiment
+
+currently checking for the upper bound 20
+Training Accuracy:85.3109061718percent
+Testing Accuracy:84.7000002861percent
+
+currently checking for the upper bound 25
+Training Accuracy:92.205452919percent
+Testing Accuracy:91.6000008583percent
+
