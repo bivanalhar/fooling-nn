@@ -1,0 +1,33 @@
+Result of the experiment
+
+currently checking for the upper bound 2
+Training Accuracy:85.9090924263 percent
+Testing Accuracy:85.3200018406 percent
+
+currently checking for the upper bound 5
+Training Accuracy:85.7400000095 percent
+Testing Accuracy:85.0399971008 percent
+
+currently checking for the upper bound 10
+Training Accuracy:82.9727292061 percent
+Testing Accuracy:81.8599998951 percent
+
+currently checking for the upper bound 15
+Training Accuracy:85.0309073925 percent
+Testing Accuracy:84.0600013733 percent
+
+currently checking for the upper bound 20
+Training Accuracy:93.1400001049 percent
+Testing Accuracy:92.2599971294 percent
+
+currently checking for the upper bound 25
+Training Accuracy:92.2836363316 percent
+Testing Accuracy:91.17000103 percent
+
+currently checking for the upper bound 50
+Training Accuracy:89.3909096718 percent
+Testing Accuracy:88.0900025368 percent
+
+currently checking for the upper bound 100
+Training Accuracy:79.8854529858 percent
+Testing Accuracy:78.6199986935 percent
