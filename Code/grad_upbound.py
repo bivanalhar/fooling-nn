@@ -1,7 +1,9 @@
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
+import PIL
 from tensorflow.python.framework import ops
+from PIL import Image
 
 """
 Method to implement : Semi-Discrete Neural Network
@@ -35,13 +37,14 @@ n_classes = 10 #remember that MNIST has 10 classes
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("/tmp/data/", one_hot=True)
 
-l2_regularize = False
+l2_regularize = True
 
 #defining the graph input
 x = tf.placeholder("float", [None, n_input])
 y = tf.placeholder("float", [None, n_classes])
 
 act_grad = FLAGS.act_grad
+reg_param = FLAGS.reg_param
 
 #defining the activation function that should be used here
 def scalar_semi_step(x_input):
@@ -115,27 +118,33 @@ b_out = tf.get_variable("b_out", shape = [n_classes], initializer = tf.contrib.l
 #constructing the model
 prediction = semi_network(x, w1, w_out, b1, b_out)
 
-cross_entropy = -tf.reduce_sum(y * tf.log(tf.clip_by_value(prediction,1e-10,1.0)))
+with tf.device("/gpu:0"):
+	cross_entropy = -tf.reduce_sum(y * tf.log(tf.clip_by_value(prediction,1e-10,1.0)))
 
-if l2_regularize:
-    cost = tf.reduce_mean(cross_entropy) + tf.nn.l2_loss(w1) + tf.nn.l2_loss(w_out) + tf.nn.l2_loss(b1) + tf.nn.l2_loss(b_out)
-else:
-    cost = tf.reduce_mean(cross_entropy)
-# cost = tf.Print(cost, [cost], "cost = ", summarize = 30)
+	if l2_regularize:
+	    cost = tf.reduce_mean(cross_entropy) + reg_param * (tf.nn.l2_loss(w1) + tf.nn.l2_loss(w_out) + tf.nn.l2_loss(b1) + tf.nn.l2_loss(b_out))
+	else:
+	    cost = tf.reduce_mean(cross_entropy)
+	# cost = tf.Print(cost, [cost], "cost = ", summarize = 30)
 optimizer = tf.train.AdamOptimizer(learning_rate = FLAGS.learning_rate).minimize(cost)
 
-grad_list = [2, 4, 8, 10, 16]
-upperbound_list = [15, 20, 25, 50]
+# grad_list = [2, 4, 8, 10, 16]
+grad_list = [2, 4, 8]
+upperbound_list = [15, 20]
+# upperbound_list = [15, 20, 25, 50]
 # upperbound_list = [20, 25]
 
-f = open("170425_fooling.txt", 'w')
-f.write("Result of the experiment\n\n")
+# f = open("170425_fooling_1.txt", 'w')
+# f.write("Result of the experiment\n\n")
 
 #Initializing the variables
 init = tf.global_variables_initializer()
 display_step = 1
 training_epochs = FLAGS.training_epoch
 count = 1
+img_input = Image.open("resized_original_5.jpg")
+img_list = np.asarray(img_input).ravel()
+img_list = np.reshape(img_list, (-1, n_input))
 
 #launching the graph
 # Launch the graph
@@ -143,6 +152,7 @@ for grad_elem in grad_list:
 	for upper in upperbound_list:
 		epoch_list = []
 		loss_list = []
+		reg_param = 0.001
 		upper_bound = upper
 		act_grad = grad_elem
 
@@ -150,7 +160,7 @@ for grad_elem in grad_list:
 		    sess.run(init)
 		    batch_size = FLAGS.batch_size
 
-		    f.write("currently checking for the upper bound " + str(upper_bound) + "and gradient " + str(act_grad) + "\n")
+		    # f.write("currently checking for the upper bound " + str(upper_bound) + "and gradient " + str(act_grad) + "\n")
 
 		    # Training cycle
 		    for epoch in range(training_epochs):
@@ -174,23 +184,26 @@ for grad_elem in grad_list:
 		                "{:.9f}".format(avg_cost))
 		    print("Optimization Finished!")
 
-		    plt.plot(epoch_list, loss_list)
-		    plt.xlabel("Epoch")
-		    plt.ylabel("Cost Function")
+		    # plt.plot(epoch_list, loss_list)
+		    # plt.xlabel("Epoch")
+		    # plt.ylabel("Cost Function")
 
-		    plt.title("Fooling NN with upper = " + str(upper_bound) + " and grad = " + str(act_grad))
+		    # plt.title("Fooling NN with upper = " + str(upper_bound) + " and grad = " + str(act_grad))
 
-		    plt.savefig("Fooling_NN_250417 Exp " + str(count) + ".png")
+		    # plt.savefig("Fooling1_NN_250417 Exp " + str(count) + ".png")
 
-		    plt.clf()
+		    # plt.clf()
 
-		    # Test model
-		    correct_prediction = tf.equal(tf.argmax(prediction, 1), tf.argmax(y, 1))
-		    # Calculate accuracy
-		    accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
+		    print("Prediction vector:" + str(sess.run(prediction, feed_dict={x : img_list})))
 
-		    f.write("Training Accuracy:" + str(100 * sess.run(accuracy, feed_dict={x: mnist.train.images, y: mnist.train.labels})) + "percent\n")
-		    f.write("Testing Accuracy:" + str(100 * sess.run(accuracy, feed_dict={x: mnist.test.images, y: mnist.test.labels})) + "percent\n\n")
+		    # with tf.device("/gpu:0"):
+			   #  # Test model
+			   #  correct_prediction = tf.equal(tf.argmax(prediction, 1), tf.argmax(y, 1))
+			   #  # Calculate accuracy
+			   #  accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
+
+		    # f.write("Training Accuracy:" + str(100 * sess.run(accuracy, feed_dict={x: mnist.train.images, y: mnist.train.labels})) + "percent\n")
+		    # f.write("Testing Accuracy:" + str(100 * sess.run(accuracy, feed_dict={x: mnist.test.images, y: mnist.test.labels})) + "percent\n\n")
 
 		    count += 1
-f.close()
+# f.close()

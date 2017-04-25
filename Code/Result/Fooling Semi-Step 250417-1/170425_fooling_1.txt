@@ -1,0 +1,26 @@
+Result of the experiment
+
+currently checking for the upper bound 15and gradient 2
+Training Accuracy:92.9654896259percent
+Testing Accuracy:92.4600124359percent
+
+currently checking for the upper bound 20and gradient 2
+Training Accuracy:92.3582136631percent
+Testing Accuracy:91.9600129128percent
+
+currently checking for the upper bound 15and gradient 4
+Training Accuracy:92.0836746693percent
+Testing Accuracy:91.5600061417percent
+
+currently checking for the upper bound 20and gradient 4
+Training Accuracy:87.6000404358percent
+Testing Accuracy:87.0700120926percent
+
+currently checking for the upper bound 15and gradient 8
+Training Accuracy:90.2509450912percent
+Testing Accuracy:90.3000116348percent
+
+currently checking for the upper bound 20and gradient 8
+Training Accuracy:89.163672924percent
+Testing Accuracy:88.9000058174percent
+
