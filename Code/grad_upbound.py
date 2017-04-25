@@ -124,70 +124,73 @@ else:
 # cost = tf.Print(cost, [cost], "cost = ", summarize = 30)
 optimizer = tf.train.AdamOptimizer(learning_rate = FLAGS.learning_rate).minimize(cost)
 
-# upperbound_list = [2, 5, 10, 15, 20, 25, 50, 100]
-upperbound_list = [20, 25]
+grad_list = [2, 4, 8, 10, 16]
+upperbound_list = [15, 20, 25, 50]
+# upperbound_list = [20, 25]
 
-f = open("170424_fooling.txt", 'a')
+f = open("170425_fooling.txt", 'w')
 f.write("Result of the experiment\n\n")
 
 #Initializing the variables
 init = tf.global_variables_initializer()
 display_step = 1
 training_epochs = FLAGS.training_epoch
-count = 4
+count = 1
 
 #launching the graph
 # Launch the graph
-for upper in upperbound_list:
-	epoch_list = []
-	loss_list = []
-	upper_bound = upper
+for grad_elem in grad_list:
+	for upper in upperbound_list:
+		epoch_list = []
+		loss_list = []
+		upper_bound = upper
+		act_grad = grad_elem
 
-	with tf.Session() as sess:
-	    sess.run(init)
-	    batch_size = FLAGS.batch_size
+		with tf.Session() as sess:
+		    sess.run(init)
+		    batch_size = FLAGS.batch_size
 
-	    f.write("currently checking for the upper bound " + str(upper_bound) + "\n")
+		    f.write("currently checking for the upper bound " + str(upper_bound) + "and gradient " + str(act_grad) + "\n")
 
-	    # Training cycle
-	    for epoch in range(training_epochs):
-	        epoch_list.append(epoch + 1)
-	        avg_cost = 0.
-	        total_batch = int(mnist.train.num_examples/batch_size)
-	        # total_batch = 2
-	        # Loop over all batches
-	        for i in range(total_batch):
-	            batch_x, batch_y = mnist.train.next_batch(batch_size)
-	            # Run optimization op (backprop) and cost op (to get loss value)
-	            _, c = sess.run([optimizer, cost], feed_dict={x: batch_x,
-	                                                          y: batch_y})
-	            # Compute average loss
-	            avg_cost += c / total_batch
-	        loss_list.append(avg_cost)
+		    # Training cycle
+		    for epoch in range(training_epochs):
+		        epoch_list.append(epoch + 1)
+		        avg_cost = 0.
+		        total_batch = int(mnist.train.num_examples/batch_size)
+		        # total_batch = 2
+		        # Loop over all batches
+		        for i in range(total_batch):
+		            batch_x, batch_y = mnist.train.next_batch(batch_size)
+		            # Run optimization op (backprop) and cost op (to get loss value)
+		            _, c = sess.run([optimizer, cost], feed_dict={x: batch_x,
+		                                                          y: batch_y})
+		            # Compute average loss
+		            avg_cost += c / total_batch
+		        loss_list.append(avg_cost)
 
-	        # Display logs per epoch step
-	        # if epoch % display_step == 0:
-	        #     print("Epoch:", '%04d' % (epoch+1), "cost=", \
-	        #         "{:.9f}".format(avg_cost))
-	    print("Optimization Finished!")
+		        # Display logs per epoch step
+		        if epoch % display_step == 0:
+		            print("Epoch:", '%04d' % (epoch+1), "cost=", \
+		                "{:.9f}".format(avg_cost))
+		    print("Optimization Finished!")
 
-	    plt.plot(epoch_list, loss_list)
-	    plt.xlabel("Epoch")
-	    plt.ylabel("Cost Function")
+		    plt.plot(epoch_list, loss_list)
+		    plt.xlabel("Epoch")
+		    plt.ylabel("Cost Function")
 
-	    plt.title("Fooling NN with upper = " + str(upper_bound))
+		    plt.title("Fooling NN with upper = " + str(upper_bound) + " and grad = " + str(act_grad))
 
-	    plt.savefig("Fooling_NN_3 Exp " + str(count) + ".png")
+		    plt.savefig("Fooling_NN_250417 Exp " + str(count) + ".png")
 
-	    plt.clf()
+		    plt.clf()
 
-	    # Test model
-	    correct_prediction = tf.equal(tf.argmax(prediction, 1), tf.argmax(y, 1))
-	    # Calculate accuracy
-	    accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
+		    # Test model
+		    correct_prediction = tf.equal(tf.argmax(prediction, 1), tf.argmax(y, 1))
+		    # Calculate accuracy
+		    accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
 
-	    f.write("Training Accuracy:" + str(100 * sess.run(accuracy, feed_dict={x: mnist.train.images, y: mnist.train.labels})) + "percent\n")
-	    f.write("Testing Accuracy:" + str(100 * sess.run(accuracy, feed_dict={x: mnist.test.images, y: mnist.test.labels})) + "percent\n\n")
+		    f.write("Training Accuracy:" + str(100 * sess.run(accuracy, feed_dict={x: mnist.train.images, y: mnist.train.labels})) + "percent\n")
+		    f.write("Testing Accuracy:" + str(100 * sess.run(accuracy, feed_dict={x: mnist.test.images, y: mnist.test.labels})) + "percent\n\n")
 
-	    count += 1
+		    count += 1
 f.close()

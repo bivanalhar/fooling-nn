@@ -1,0 +1,82 @@
+Result of the experiment
+
+currently checking for the upper bound 15and gradient 2
+Training Accuracy:93.5581803322percent
+Testing Accuracy:93.0499970913percent
+
+currently checking for the upper bound 20and gradient 2
+Training Accuracy:92.8454518318percent
+Testing Accuracy:92.049998045percent
+
+currently checking for the upper bound 25and gradient 2
+Training Accuracy:82.0927262306percent
+Testing Accuracy:80.940002203percent
+
+currently checking for the upper bound 50and gradient 2
+Training Accuracy:83.2290887833percent
+Testing Accuracy:82.7300012112percent
+
+currently checking for the upper bound 15and gradient 4
+Training Accuracy:75.4381835461percent
+Testing Accuracy:75.1999974251percent
+
+currently checking for the upper bound 20and gradient 4
+Training Accuracy:91.2400007248percent
+Testing Accuracy:90.5499994755percent
+
+currently checking for the upper bound 25and gradient 4
+Training Accuracy:81.0072720051percent
+Testing Accuracy:80.4099977016percent
+
+currently checking for the upper bound 50and gradient 4
+Training Accuracy:85.0890934467percent
+Testing Accuracy:83.6399972439percent
+
+currently checking for the upper bound 15and gradient 8
+Training Accuracy:80.9363663197percent
+Testing Accuracy:80.7900011539percent
+
+currently checking for the upper bound 20and gradient 8
+Training Accuracy:89.2309069633percent
+Testing Accuracy:89.3000006676percent
+
+currently checking for the upper bound 25and gradient 8
+Training Accuracy:80.5781841278percent
+Testing Accuracy:80.269998312percent
+
+currently checking for the upper bound 50and gradient 8
+Training Accuracy:78.2509088516percent
+Testing Accuracy:77.8100013733percent
+
+currently checking for the upper bound 15and gradient 10
+Training Accuracy:72.2963631153percent
+Testing Accuracy:72.4399983883percent
+
+currently checking for the upper bound 20and gradient 10
+Training Accuracy:70.0309097767percent
+Testing Accuracy:69.5100009441percent
+
+currently checking for the upper bound 25and gradient 10
+Training Accuracy:70.7927286625percent
+Testing Accuracy:70.459997654percent
+
+currently checking for the upper bound 50and gradient 10
+Training Accuracy:75.7763624191percent
+Testing Accuracy:75.2300024033percent
+
+currently checking for the upper bound 15and gradient 16
+Training Accuracy:81.0618162155percent
+Testing Accuracy:81.3499987125percent
+
+currently checking for the upper bound 20and gradient 16
+Training Accuracy:86.7254555225percent
+Testing Accuracy:86.7399990559percent
+
+currently checking for the upper bound 25and gradient 16
+Training Accuracy:86.3636374474percent
+Testing Accuracy:86.1899971962percent
+
+currently checking for the upper bound 50and gradient 16
+Training Accuracy:73.1145441532percent
+Testing Accuracy:73.9099979401percent
+
