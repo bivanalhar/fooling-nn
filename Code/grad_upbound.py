@@ -117,6 +117,7 @@ b_out = tf.get_variable("b_out", shape = [n_classes], initializer = tf.contrib.l
 
 #constructing the model
 prediction = semi_network(x, w1, w_out, b1, b_out)
+pred_result = np.asarray(np.argmax(prediction))
 
 with tf.device("/gpu:0"):
 	cross_entropy = -tf.reduce_sum(y * tf.log(tf.clip_by_value(prediction,1e-10,1.0)))
@@ -142,9 +143,11 @@ init = tf.global_variables_initializer()
 display_step = 1
 training_epochs = FLAGS.training_epoch
 count = 1
-img_input = Image.open("resized_original_5.jpg")
-img_list = np.asarray(img_input).ravel()
-img_list = np.reshape(img_list, (-1, n_input))
+img_input1 = Image.open("resized_original_7.png")
+img_input2 = Image.open("resized_adversarial_7.png")
+img_list1 = np.divide(np.reshape(np.asarray(img_input1).ravel(), (-1, n_input)), 255)
+img_list2 = np.divide(np.reshape(np.asarray(img_input2).ravel(), (-1, n_input)), 255)
+# print(img_list1)
 
 #launching the graph
 # Launch the graph
@@ -194,7 +197,8 @@ for grad_elem in grad_list:
 
 		    # plt.clf()
 
-		    print("Prediction vector:" + str(sess.run(prediction, feed_dict={x : img_list})))
+		    print("Prediction vector original: " + str(sess.run(prediction, feed_dict={x : img_list1})))
+		    print("Prediction vector adversarial: " + str(sess.run(prediction, feed_dict={x : img_list2})))
 
 		    # with tf.device("/gpu:0"):
 			   #  # Test model
