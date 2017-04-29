@@ -5,6 +5,9 @@ import PIL
 from tensorflow.python.framework import ops
 from PIL import Image
 
+from cleverhans.utils_tf import model_train, model_eval, batch_eval
+from cleverhans.attacks import fgsm, jsma
+
 """
 Method to implement : Semi-Discrete Neural Network
 (the function which has the slanted and non-slanted region,
@@ -73,7 +76,7 @@ d_semistep = np.vectorize(derivative_semistep)
 d_semistep32 = lambda x: d_semistep(x).astype(np.float32)
 
 def tf_d_semistep(x_input, name=None):
-	with ops.op_scope([x_input], name, "d_semistep") as name:
+	with ops.name_scope(name, "d_semistep", [x_input]) as name:
 		y = tf.py_func(d_semistep32, [x_input], [tf.float32], name=name, stateful=False)
 		return y[0]
 
@@ -95,7 +98,7 @@ def semistep_grad(op, grad):
 semi_step32 = lambda x: semi_step(x).astype(np.float32)
 
 def tf_semistep(x_input, name=None):
-	with ops.op_scope([x_input], name, "semi_step") as name:
+	with ops.name_scope(name, "semi_step", [x_input]) as name:
 		y = py_func(semi_step32, [x_input], [tf.float32], name=name, grad=semistep_grad)
 		return y[0]
 
@@ -117,7 +120,6 @@ b_out = tf.get_variable("b_out", shape = [n_classes], initializer = tf.contrib.l
 
 #constructing the model
 prediction = semi_network(x, w1, w_out, b1, b_out)
-pred_result = np.asarray(np.argmax(prediction))
 
 with tf.device("/gpu:0"):
 	cross_entropy = -tf.reduce_sum(y * tf.log(tf.clip_by_value(prediction,1e-10,1.0)))
@@ -129,85 +131,71 @@ with tf.device("/gpu:0"):
 	# cost = tf.Print(cost, [cost], "cost = ", summarize = 30)
 optimizer = tf.train.AdamOptimizer(learning_rate = FLAGS.learning_rate).minimize(cost)
 
+with tf.device("/gpu:0"):
+    # Test model
+    correct_prediction = tf.equal(tf.argmax(prediction, 1), tf.argmax(y, 1))
+    # Calculate accuracy
+    accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
+
 # grad_list = [2, 4, 8, 10, 16]
 grad_list = [2, 4, 8]
 upperbound_list = [15, 20]
 # upperbound_list = [15, 20, 25, 50]
 # upperbound_list = [20, 25]
 
-# f = open("170425_fooling_1.txt", 'w')
-# f.write("Result of the experiment\n\n")
-
 #Initializing the variables
 init = tf.global_variables_initializer()
 display_step = 1
 training_epochs = FLAGS.training_epoch
 count = 1
-img_input1 = Image.open("resized_original_7.png")
-img_input2 = Image.open("resized_adversarial_7.png")
-img_list1 = np.divide(np.reshape(np.asarray(img_input1).ravel(), (-1, n_input)), 255)
-img_list2 = np.divide(np.reshape(np.asarray(img_input2).ravel(), (-1, n_input)), 255)
 # print(img_list1)
 
 #launching the graph
 # Launch the graph
-for grad_elem in grad_list:
-	for upper in upperbound_list:
-		epoch_list = []
-		loss_list = []
-		reg_param = 0.001
-		upper_bound = upper
-		act_grad = grad_elem
+epoch_list = []
+loss_list = []
+reg_param = 0.001
 
-		with tf.Session() as sess:
-		    sess.run(init)
-		    batch_size = FLAGS.batch_size
+for upper in upperbound_list:
+    for grad_act in grad_list:
+        with tf.Session() as sess:
+            sess.run(init)
+            batch_size = FLAGS.batch_size
+            act_grad = grad_act
+            upper_bound = upper
 
-		    # f.write("currently checking for the upper bound " + str(upper_bound) + "and gradient " + str(act_grad) + "\n")
+            print("currently checking for the upper bound " + str(upper_bound) + "and gradient " + str(act_grad))
 
-		    # Training cycle
-		    for epoch in range(training_epochs):
-		        epoch_list.append(epoch + 1)
-		        avg_cost = 0.
-		        total_batch = int(mnist.train.num_examples/batch_size)
-		        # total_batch = 2
-		        # Loop over all batches
-		        for i in range(total_batch):
-		            batch_x, batch_y = mnist.train.next_batch(batch_size)
-		            # Run optimization op (backprop) and cost op (to get loss value)
-		            _, c = sess.run([optimizer, cost], feed_dict={x: batch_x,
-		                                                          y: batch_y})
-		            # Compute average loss
-		            avg_cost += c / total_batch
-		        loss_list.append(avg_cost)
+            # Training cycle
+            for epoch in range(training_epochs):
+                epoch_list.append(epoch + 1)
+                avg_cost = 0.
+                total_batch = int(mnist.train.num_examples/batch_size)
+                # total_batch = 2
+                # Loop over all batches
+                for i in range(total_batch):
+                    batch_x, batch_y = mnist.train.next_batch(batch_size)
+                    # Run optimization op (backprop) and cost op (to get loss value)
+                    _, c = sess.run([optimizer, cost], feed_dict={x: batch_x,
+                                                                  y: batch_y})
+                    # Compute average loss
+                    avg_cost += c / total_batch
+                loss_list.append(avg_cost)
 
-		        # Display logs per epoch step
-		        if epoch % display_step == 0:
-		            print("Epoch:", '%04d' % (epoch+1), "cost=", \
-		                "{:.9f}".format(avg_cost))
-		    print("Optimization Finished!")
+                # Display logs per epoch step
+                if epoch % display_step == 0:
+                    print("Epoch:", '%04d' % (epoch+1), "cost=", \
+                        "{:.9f}".format(avg_cost))
+            print("Optimization Finished!")
+            print("Training Accuracy : " + str(100 * sess.run(accuracy, feed_dict={x: mnist.train.images, y: mnist.train.labels})) + " percent")
+            print("Testing Accuracy : " + str(100 * sess.run(accuracy, feed_dict={x: mnist.test.images, y: mnist.test.labels})) + " percent")
 
-		    # plt.plot(epoch_list, loss_list)
-		    # plt.xlabel("Epoch")
-		    # plt.ylabel("Cost Function")
+            count += 1
 
-		    # plt.title("Fooling NN with upper = " + str(upper_bound) + " and grad = " + str(act_grad))
+            adv_x = fgsm(x, prediction, eps = 0.3)
+            X_test_adv, = batch_eval(sess, [x], [adv_x], [mnist.test.images], args={'batch_size' : 128})
 
-		    # plt.savefig("Fooling1_NN_250417 Exp " + str(count) + ".png")
-
-		    # plt.clf()
-
-		    print("Prediction vector original: " + str(sess.run(prediction, feed_dict={x : img_list1})))
-		    print("Prediction vector adversarial: " + str(sess.run(prediction, feed_dict={x : img_list2})))
-
-		    # with tf.device("/gpu:0"):
-			   #  # Test model
-			   #  correct_prediction = tf.equal(tf.argmax(prediction, 1), tf.argmax(y, 1))
-			   #  # Calculate accuracy
-			   #  accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
-
-		    # f.write("Training Accuracy:" + str(100 * sess.run(accuracy, feed_dict={x: mnist.train.images, y: mnist.train.labels})) + "percent\n")
-		    # f.write("Testing Accuracy:" + str(100 * sess.run(accuracy, feed_dict={x: mnist.test.images, y: mnist.test.labels})) + "percent\n\n")
-
-		    count += 1
-# f.close()
+            accuracy = model_eval(sess, x, y, prediction, X_test_adv, mnist.test.labels,
+                                  args={'batch_size' : 128})
+            print('Test accuracy on adversarial examples: ' + str(accuracy * 100) + ' percent')
+        # f.close()
