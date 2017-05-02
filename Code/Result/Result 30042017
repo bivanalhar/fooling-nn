@@ -1,0 +1,179 @@
+currently checking for the upper bound 15 and gradient 2
+Epoch: 0001 cost= 168.469175574
+Epoch: 0002 cost= 96.795718009
+Epoch: 0003 cost= 80.563816933
+Epoch: 0004 cost= 72.456161632
+Epoch: 0005 cost= 67.612690461
+Epoch: 0006 cost= 63.675735918
+Epoch: 0007 cost= 60.961454912
+Epoch: 0008 cost= 59.058141686
+Epoch: 0009 cost= 57.561484206
+Epoch: 0010 cost= 55.636073915
+Epoch: 0011 cost= 54.347472282
+Epoch: 0012 cost= 53.111971030
+Epoch: 0013 cost= 52.071620176
+Epoch: 0014 cost= 50.964065752
+Epoch: 0015 cost= 49.734129650
+Epoch: 0016 cost= 48.682787631
+Epoch: 0017 cost= 47.816765378
+Epoch: 0018 cost= 47.528982763
+Epoch: 0019 cost= 46.719139446
+Epoch: 0020 cost= 46.071090858
+Optimization Finished!
+Testing Accuracy : 92.4200177193 percent
+Test accuracy on adversarial examples: 27.95 percent
+
+currently checking for the upper bound 15 and gradient 4
+Epoch: 0001 cost= 229.587133465
+Epoch: 0002 cost= 184.326340718
+Epoch: 0003 cost= 187.448162177
+Epoch: 0004 cost= 165.449766857
+Epoch: 0005 cost= 113.023986736
+Epoch: 0006 cost= 79.844070604
+Epoch: 0007 cost= 76.186228781
+Epoch: 0008 cost= 72.785399928
+Epoch: 0009 cost= 70.192611588
+Epoch: 0010 cost= 67.391962723
+Epoch: 0011 cost= 66.254328685
+Epoch: 0012 cost= 64.009379985
+Epoch: 0013 cost= 62.671691841
+Epoch: 0014 cost= 60.726648246
+Epoch: 0015 cost= 59.694816216
+Epoch: 0016 cost= 58.568872065
+Epoch: 0017 cost= 57.124140546
+Epoch: 0018 cost= 56.434586736
+Epoch: 0019 cost= 55.985599936
+Epoch: 0020 cost= 55.354523319
+Optimization Finished!
+Testing Accuracy : 91.4600074291 percent
+Test accuracy on adversarial examples: 31.15 percent
+
+currently checking for the upper bound 15 and gradient 8
+Epoch: 0001 cost= 272.048352755
+Epoch: 0002 cost= 239.859203419
+Epoch: 0003 cost= 125.753713683
+Epoch: 0004 cost= 112.190639060
+Epoch: 0005 cost= 103.008700480
+Epoch: 0006 cost= 95.428783123
+Epoch: 0007 cost= 90.442515233
+Epoch: 0008 cost= 84.918385148
+Epoch: 0009 cost= 81.629002747
+Epoch: 0010 cost= 79.348711970
+Epoch: 0011 cost= 76.206535419
+Epoch: 0012 cost= 74.302029963
+Epoch: 0013 cost= 74.669605798
+Epoch: 0014 cost= 72.173804027
+Epoch: 0015 cost= 70.106704098
+Epoch: 0016 cost= 69.192280509
+Epoch: 0017 cost= 69.175661687
+Epoch: 0018 cost= 68.059534495
+Epoch: 0019 cost= 65.446167472
+Epoch: 0020 cost= 64.823373230
+Optimization Finished!
+Testing Accuracy : 90.2200102806 percent
+Test accuracy on adversarial examples: 49.32 percent
+
+currently checking for the upper bound 20 and gradient 2
+Epoch: 0001 cost= 221.033861209
+Epoch: 0002 cost= 159.827084326
+Epoch: 0003 cost= 136.147171483
+Epoch: 0004 cost= 106.905596575
+Epoch: 0005 cost= 91.961472687
+Epoch: 0006 cost= 87.032065767
+Epoch: 0007 cost= 84.819600548
+Epoch: 0008 cost= 82.841522679
+Epoch: 0009 cost= 79.331210814
+Epoch: 0010 cost= 77.491970943
+Epoch: 0011 cost= 79.390847355
+Epoch: 0012 cost= 75.884252072
+Epoch: 0013 cost= 74.788466269
+Epoch: 0014 cost= 74.085543208
+Epoch: 0015 cost= 73.542067681
+Epoch: 0016 cost= 73.295204385
+Epoch: 0017 cost= 72.294313426
+Epoch: 0018 cost= 70.903733269
+Epoch: 0019 cost= 70.582398457
+Epoch: 0020 cost= 69.212685485
+Optimization Finished!
+Testing Accuracy : 90.3900146484 percent
+Test accuracy on adversarial examples: 21.96 percent
+
+currently checking for the upper bound 20 and gradient 4
+Epoch: 0001 cost= 241.284226531
+Epoch: 0002 cost= 180.382366421
+Epoch: 0003 cost= 153.116595093
+Epoch: 0004 cost= 131.006196135
+Epoch: 0005 cost= 115.917107518
+Epoch: 0006 cost= 82.934410380
+Epoch: 0007 cost= 81.376665858
+Epoch: 0008 cost= 76.063000926
+Epoch: 0009 cost= 71.254448648
+Epoch: 0010 cost= 69.131940642
+Epoch: 0011 cost= 67.387942299
+Epoch: 0012 cost= 65.411496134
+Epoch: 0013 cost= 64.398861607
+Epoch: 0014 cost= 62.851190776
+Epoch: 0015 cost= 61.468854491
+Epoch: 0016 cost= 59.630109151
+Epoch: 0017 cost= 59.093757327
+Epoch: 0018 cost= 58.423121268
+Epoch: 0019 cost= 56.866297333
+Epoch: 0020 cost= 56.701460485
+Optimization Finished!
+Testing Accuracy : 90.9000098705 percent
+Test accuracy on adversarial examples: 33.12 percent
+
+currently checking for the upper bound 20 and gradient 8
+Epoch: 0001 cost= 254.838525234
+Epoch: 0002 cost= 221.762664475
+Epoch: 0003 cost= 252.159880916
+Epoch: 0004 cost= 261.049546924
+Epoch: 0005 cost= 237.539401643
+Epoch: 0006 cost= 220.780499865
+Epoch: 0007 cost= 200.017537346
+Epoch: 0008 cost= 185.338551288
+Epoch: 0009 cost= 169.194194820
+Epoch: 0010 cost= 157.440592999
+Epoch: 0011 cost= 139.110735949
+Epoch: 0012 cost= 129.546524866
+Epoch: 0013 cost= 117.728611588
+Epoch: 0014 cost= 110.456210174
+Epoch: 0015 cost= 106.609274786
+Epoch: 0016 cost= 104.415703771
+Epoch: 0017 cost= 101.306692999
+Epoch: 0018 cost= 98.869389532
+Epoch: 0019 cost= 95.984300902
+Epoch: 0020 cost= 95.299489401
+Optimization Finished!
+Testing Accuracy : 86.3500058651 percent
+Test accuracy on adversarial examples: 43.86 percent
+
+-----------------------------------------------------------------------------------
+Testing on ReLU Activation Function
+
+currently checking for the upper bound 20 and gradient 2
+Epoch: 0001 cost= 141.923339328
+Epoch: 0002 cost= 63.025097293
+Epoch: 0003 cost= 52.588916699
+Epoch: 0004 cost= 47.139492973
+Epoch: 0005 cost= 43.381256748
+Epoch: 0006 cost= 40.418755783
+Epoch: 0007 cost= 38.045726647
+Epoch: 0008 cost= 36.043734375
+Epoch: 0009 cost= 34.299236996
+Epoch: 0010 cost= 32.739355594
+Epoch: 0011 cost= 31.440351833
+Epoch: 0012 cost= 30.248771939
+Epoch: 0013 cost= 29.216343433
+Epoch: 0014 cost= 28.234245185
+Epoch: 0015 cost= 27.395028094
+Epoch: 0016 cost= 26.636711647
+Epoch: 0017 cost= 25.933668501
+Epoch: 0018 cost= 25.299376199
+Epoch: 0019 cost= 24.703310337
+Epoch: 0020 cost= 24.180343539
+Optimization Finished!
+Testing Accuracy : 96.7100143433 percent
+Test accuracy on adversarial examples: 2.05 percent
+
+
