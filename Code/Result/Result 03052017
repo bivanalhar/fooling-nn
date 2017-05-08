@@ -1,0 +1,206 @@
+currently checking for the upper bound 15 and gradient 2
+Epoch: 0001 cost= 190.099491911
+Epoch: 0002 cost= 133.650249704
+Epoch: 0003 cost= 121.846665442
+Epoch: 0004 cost= 115.401468095
+Epoch: 0005 cost= 110.943762684
+Epoch: 0006 cost= 107.824371373
+Epoch: 0007 cost= 105.110381796
+Epoch: 0008 cost= 103.032653471
+Epoch: 0009 cost= 101.143821147
+Epoch: 0010 cost= 99.430556557
+Epoch: 0011 cost= 98.135058583
+Epoch: 0012 cost= 96.990352782
+Epoch: 0013 cost= 95.680173736
+Epoch: 0014 cost= 94.931384320
+Epoch: 0015 cost= 93.890728166
+Epoch: 0016 cost= 92.959231388
+Epoch: 0017 cost= 88.286609267
+Epoch: 0018 cost= 78.406026631
+Epoch: 0019 cost= 65.438949274
+Epoch: 0020 cost= 62.005350686
+Epoch: 0021 cost= 60.596536125
+Epoch: 0022 cost= 59.822782361
+Epoch: 0023 cost= 58.840187864
+Epoch: 0024 cost= 58.269755197
+Epoch: 0025 cost= 57.456785971
+Epoch: 0026 cost= 56.981218289
+Epoch: 0027 cost= 56.598566615
+Epoch: 0028 cost= 56.205668594
+Epoch: 0029 cost= 55.716123843
+Epoch: 0030 cost= 55.256907412
+Optimization Finished!
+validation accuracy is 87.6999735832 percent
+best validation reached at grad 2 and upper bound 15
+
+currently checking for the upper bound 15 and gradient 4
+Epoch: 0001 cost= 201.343372638
+Epoch: 0002 cost= 124.454109619
+Epoch: 0003 cost= 107.287942206
+Epoch: 0004 cost= 97.985641942
+Epoch: 0005 cost= 92.291167448
+Epoch: 0006 cost= 87.893307879
+Epoch: 0007 cost= 84.444149649
+Epoch: 0008 cost= 81.589765455
+Epoch: 0009 cost= 79.172913727
+Epoch: 0010 cost= 77.241098391
+Epoch: 0011 cost= 75.440653234
+Epoch: 0012 cost= 73.981693214
+Epoch: 0013 cost= 72.450808332
+Epoch: 0014 cost= 70.936659433
+Epoch: 0015 cost= 69.929058528
+Epoch: 0016 cost= 68.704379342
+Epoch: 0017 cost= 67.819202281
+Epoch: 0018 cost= 66.882804408
+Epoch: 0019 cost= 65.920549744
+Epoch: 0020 cost= 64.953358746
+Epoch: 0021 cost= 64.481178871
+Epoch: 0022 cost= 63.870556714
+Epoch: 0023 cost= 63.302193799
+Epoch: 0024 cost= 62.708886669
+Epoch: 0025 cost= 62.097286847
+Epoch: 0026 cost= 61.436723571
+Epoch: 0027 cost= 60.800800412
+Epoch: 0028 cost= 60.444720608
+Epoch: 0029 cost= 52.467670058
+Epoch: 0030 cost= 47.551642905
+Optimization Finished!
+validation accuracy is 96.2199747562 percent
+best validation reached at grad 4 and upper bound 15
+
+currently checking for the upper bound 15 and gradient 8
+Epoch: 0001 cost= 225.475615601
+Epoch: 0002 cost= 144.580506669
+Epoch: 0003 cost= 115.576874900
+Epoch: 0004 cost= 88.984684124
+Epoch: 0005 cost= 77.841213840
+Epoch: 0006 cost= 71.730137049
+Epoch: 0007 cost= 66.527465829
+Epoch: 0008 cost= 62.511616189
+Epoch: 0009 cost= 59.269562248
+Epoch: 0010 cost= 56.763357932
+Epoch: 0011 cost= 54.305412044
+Epoch: 0012 cost= 52.033740953
+Epoch: 0013 cost= 50.397510484
+Epoch: 0014 cost= 48.920027237
+Epoch: 0015 cost= 47.089344612
+Epoch: 0016 cost= 45.918500593
+Epoch: 0017 cost= 44.702493076
+Epoch: 0018 cost= 43.705503268
+Epoch: 0019 cost= 42.576929515
+Epoch: 0020 cost= 41.405446282
+Epoch: 0021 cost= 40.196077111
+Epoch: 0022 cost= 39.694716963
+Epoch: 0023 cost= 39.149898289
+Epoch: 0024 cost= 38.276139795
+Epoch: 0025 cost= 37.446931417
+Epoch: 0026 cost= 36.967606444
+Epoch: 0027 cost= 35.925900413
+Epoch: 0028 cost= 35.591344740
+Epoch: 0029 cost= 34.737299921
+Epoch: 0030 cost= 34.013800245
+Optimization Finished!
+validation accuracy is 95.4999685287 percent
+
+currently checking for the upper bound 20 and gradient 2
+Epoch: 0001 cost= 184.152799237
+Epoch: 0002 cost= 88.818158005
+Epoch: 0003 cost= 68.264760353
+Epoch: 0004 cost= 60.030903387
+Epoch: 0005 cost= 54.976218457
+Epoch: 0006 cost= 51.317320915
+Epoch: 0007 cost= 48.447896900
+Epoch: 0008 cost= 46.358396944
+Epoch: 0009 cost= 44.244640248
+Epoch: 0010 cost= 42.546418832
+Epoch: 0011 cost= 40.908521417
+Epoch: 0012 cost= 39.563277594
+Epoch: 0013 cost= 38.264048667
+Epoch: 0014 cost= 37.171380125
+Epoch: 0015 cost= 36.219843075
+Epoch: 0016 cost= 35.165228948
+Epoch: 0017 cost= 34.573294917
+Epoch: 0018 cost= 33.589152054
+Epoch: 0019 cost= 32.736946648
+Epoch: 0020 cost= 32.019204662
+Epoch: 0021 cost= 31.561535918
+Epoch: 0022 cost= 30.958380746
+Epoch: 0023 cost= 30.493706252
+Epoch: 0024 cost= 30.032261108
+Epoch: 0025 cost= 29.582951375
+Epoch: 0026 cost= 29.201752065
+Epoch: 0027 cost= 28.357966070
+Epoch: 0028 cost= 28.341973076
+Epoch: 0029 cost= 27.685724699
+Epoch: 0030 cost= 27.471640273
+Optimization Finished!
+validation accuracy is 96.0999727249 percent
+
+currently checking for the upper bound 20 and gradient 4
+Epoch: 0001 cost= 218.493410515
+Epoch: 0002 cost= 159.336931989
+Epoch: 0003 cost= 145.737636059
+Epoch: 0004 cost= 138.684383455
+Epoch: 0005 cost= 134.320870406
+Epoch: 0006 cost= 131.049082118
+Epoch: 0007 cost= 128.288948095
+Epoch: 0008 cost= 126.061863755
+Epoch: 0009 cost= 124.251479907
+Epoch: 0010 cost= 122.402614531
+Epoch: 0011 cost= 121.066605610
+Epoch: 0012 cost= 119.536137792
+Epoch: 0013 cost= 118.360650443
+Epoch: 0014 cost= 117.594413348
+Epoch: 0015 cost= 116.564584923
+Epoch: 0016 cost= 116.019742419
+Epoch: 0017 cost= 114.734839468
+Epoch: 0018 cost= 114.157464194
+Epoch: 0019 cost= 113.403121575
+Epoch: 0020 cost= 112.735417044
+Epoch: 0021 cost= 112.230866546
+Epoch: 0022 cost= 111.444496528
+Epoch: 0023 cost= 111.330059416
+Epoch: 0024 cost= 110.670562460
+Epoch: 0025 cost= 107.984633368
+Epoch: 0026 cost= 99.602498399
+Epoch: 0027 cost= 90.733323726
+Epoch: 0028 cost= 89.734972840
+Epoch: 0029 cost= 89.191280152
+Epoch: 0030 cost= 88.742540311
+Optimization Finished!
+validation accuracy is 83.7999820709 percent
+
+currently checking for the upper bound 20 and gradient 8
+Epoch: 0001 cost= 226.688690506
+Epoch: 0002 cost= 149.016557031
+Epoch: 0003 cost= 120.504621581
+Epoch: 0004 cost= 108.215291270
+Epoch: 0005 cost= 99.881811449
+Epoch: 0006 cost= 95.163863638
+Epoch: 0007 cost= 91.071403975
+Epoch: 0008 cost= 87.981969616
+Epoch: 0009 cost= 84.904902532
+Epoch: 0010 cost= 82.551918732
+Epoch: 0011 cost= 80.207164844
+Epoch: 0012 cost= 78.670390709
+Epoch: 0013 cost= 76.986752917
+Epoch: 0014 cost= 75.297979510
+Epoch: 0015 cost= 73.968640085
+Epoch: 0016 cost= 72.737924385
+Epoch: 0017 cost= 71.619531823
+Epoch: 0018 cost= 70.503569863
+Epoch: 0019 cost= 69.481174825
+Epoch: 0020 cost= 68.675702288
+Epoch: 0021 cost= 67.643394701
+Epoch: 0022 cost= 67.036211169
+Epoch: 0023 cost= 66.247866499
+Epoch: 0024 cost= 65.496020915
+Epoch: 0025 cost= 65.220589111
+Epoch: 0026 cost= 64.318238238
+Epoch: 0027 cost= 63.766454514
+Epoch: 0028 cost= 62.813636504
+Epoch: 0029 cost= 62.035857781
+Epoch: 0030 cost= 61.827266889
+Optimization Finished!
+validation accuracy is 86.6799771786 percent
+
