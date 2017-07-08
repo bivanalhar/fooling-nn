@@ -1,0 +1,234 @@
+Test accuracy is 97.200012207 percent
+checking for epsilon = 0.0
+Test accuracy on adversarial examples: 0.972
+now trying to use adversarial training
+variables initialized
+	Epoch 1 took 80.1683361530304 seconds and loss 99.4260409422
+	Epoch 2 took 80.80451536178589 seconds and loss 63.7677365414
+	Epoch 3 took 79.67142820358276 seconds and loss 57.6738345346
+	Epoch 4 took 79.64052820205688 seconds and loss 53.8016961741
+	Epoch 5 took 79.67815923690796 seconds and loss 52.2982642684
+	Epoch 6 took 80.4559874534607 seconds and loss 50.8719856706
+	Epoch 7 took 79.54632329940796 seconds and loss 49.7905286612
+	Epoch 8 took 79.43982434272766 seconds and loss 48.9624770142
+	Epoch 9 took 79.5594744682312 seconds and loss 48.1850819033
+	Epoch 10 took 79.56567525863647 seconds and loss 47.8326327479
+	Epoch 11 took 79.85890460014343 seconds and loss 47.5881512221
+	Epoch 12 took 80.055419921875 seconds and loss 47.2062849444
+	Epoch 13 took 79.71685791015625 seconds and loss 46.9079213076
+	Epoch 14 took 79.4219331741333 seconds and loss 46.9861634144
+	Epoch 15 took 79.49729108810425 seconds and loss 46.6271111821
+	Epoch 16 took 79.39071440696716 seconds and loss 46.2916246414
+	Epoch 17 took 79.86287522315979 seconds and loss 30.9676526802
+	Epoch 18 took 79.58116269111633 seconds and loss 19.6663936548
+	Epoch 19 took 79.62234449386597 seconds and loss 19.1297135553
+	Epoch 20 took 79.48625612258911 seconds and loss 18.8501273066
+	Epoch 21 took 79.509840965271 seconds and loss 18.4962943587
+	Epoch 22 took 79.53462338447571 seconds and loss 17.8165403277
+	Epoch 23 took 79.58545160293579 seconds and loss 18.1999169505
+	Epoch 24 took 79.37595105171204 seconds and loss 18.4251488309
+	Epoch 25 took 79.43614888191223 seconds and loss 18.1378037852
+	Epoch 26 took 79.22955417633057 seconds and loss 17.7684577232
+	Epoch 27 took 79.63031482696533 seconds and loss 17.9018155852
+	Epoch 28 took 79.34380292892456 seconds and loss 17.9189696911
+	Epoch 29 took 79.25900840759277 seconds and loss 17.5089439192
+	Epoch 30 took 79.10923099517822 seconds and loss 17.5508637273
+Test accuracy on legitimate test examples: 0.9726
+Test accuracy on adversarial examples: 0.9726
+Completed model training.
+
+Test accuracy is 97.200012207 percent
+checking for epsilon = 0.05
+Test accuracy on adversarial examples: 0.8752
+now trying to use adversarial training
+variables initialized
+	Epoch 1 took 80.49158763885498 seconds and loss 130.372569488
+	Epoch 2 took 79.51314783096313 seconds and loss 90.398865784
+	Epoch 3 took 80.58536338806152 seconds and loss 84.9547615495
+	Epoch 4 took 79.9183361530304 seconds and loss 81.8395560154
+	Epoch 5 took 79.60291457176208 seconds and loss 79.9296239454
+	Epoch 6 took 79.97699928283691 seconds and loss 78.8900742908
+	Epoch 7 took 79.59557557106018 seconds and loss 78.0130384578
+	Epoch 8 took 79.51504158973694 seconds and loss 77.3354600418
+	Epoch 9 took 79.73005080223083 seconds and loss 77.0291259766
+	Epoch 10 took 79.53703999519348 seconds and loss 76.5349491208
+	Epoch 11 took 79.23734068870544 seconds and loss 75.9262003433
+	Epoch 12 took 79.76461338996887 seconds and loss 56.1928895684
+	Epoch 13 took 79.56164145469666 seconds and loss 48.0281068314
+	Epoch 14 took 79.38492846488953 seconds and loss 47.3193131957
+	Epoch 15 took 79.28109169006348 seconds and loss 46.8502490288
+	Epoch 16 took 79.13503432273865 seconds and loss 46.4026401608
+	Epoch 17 took 79.4539532661438 seconds and loss 46.4564659119
+	Epoch 18 took 79.76673197746277 seconds and loss 46.153041467
+	Epoch 19 took 79.35624146461487 seconds and loss 46.1200569197
+	Epoch 20 took 79.49597573280334 seconds and loss 37.6780003969
+	Epoch 21 took 80.06030941009521 seconds and loss 18.3317183539
+	Epoch 22 took 79.43267893791199 seconds and loss 18.0211062454
+	Epoch 23 took 79.17440891265869 seconds and loss 17.6981791385
+	Epoch 24 took 79.19866895675659 seconds and loss 17.5956148746
+	Epoch 25 took 78.99456000328064 seconds and loss 17.2192657205
+	Epoch 26 took 78.66757917404175 seconds and loss 16.9589270281
+	Epoch 27 took 78.96766924858093 seconds and loss 17.0159888312
+	Epoch 28 took 78.88873338699341 seconds and loss 16.9514944099
+	Epoch 29 took 78.58127760887146 seconds and loss 17.2410277766
+	Epoch 30 took 78.83057236671448 seconds and loss 16.9178794173
+Test accuracy on legitimate test examples: 0.9722
+Test accuracy on adversarial examples: 0.9682
+Completed model training.
+
+Test accuracy is 97.200012207 percent
+checking for epsilon = 0.07
+Test accuracy on adversarial examples: 0.7797
+now trying to use adversarial training
+variables initialized
+	Epoch 1 took 79.45673966407776 seconds and loss 125.517055977
+	Epoch 2 took 79.06893348693848 seconds and loss 36.4961787956
+	Epoch 3 took 78.87951731681824 seconds and loss 28.6793990645
+	Epoch 4 took 79.47071051597595 seconds and loss 25.1032723249
+	Epoch 5 took 79.35957098007202 seconds and loss 23.0224370979
+	Epoch 6 took 79.04806923866272 seconds and loss 21.4502597299
+	Epoch 7 took 79.27863788604736 seconds and loss 20.4270512758
+	Epoch 8 took 79.41732144355774 seconds and loss 19.461394982
+	Epoch 9 took 79.07045269012451 seconds and loss 19.0239987684
+	Epoch 10 took 79.0818190574646 seconds and loss 18.5199115664
+	Epoch 11 took 78.6595025062561 seconds and loss 18.3762694226
+	Epoch 12 took 78.94005751609802 seconds and loss 18.1980061509
+	Epoch 13 took 78.41321611404419 seconds and loss 17.7928120702
+	Epoch 14 took 78.81200623512268 seconds and loss 17.9480160935
+	Epoch 15 took 78.9711766242981 seconds and loss 17.5569511303
+	Epoch 16 took 78.99883675575256 seconds and loss 17.3715417729
+	Epoch 17 took 79.04738998413086 seconds and loss 17.1534311716
+	Epoch 18 took 78.89239025115967 seconds and loss 17.181627797
+	Epoch 19 took 78.7372317314148 seconds and loss 16.8891147347
+	Epoch 20 took 78.68269515037537 seconds and loss 16.8411190255
+	Epoch 21 took 78.69320464134216 seconds and loss 16.9845360978
+	Epoch 22 took 78.70987629890442 seconds and loss 17.0296071563
+	Epoch 23 took 79.17542815208435 seconds and loss 16.6938922505
+	Epoch 24 took 78.66056108474731 seconds and loss 16.8287752839
+	Epoch 25 took 78.92592358589172 seconds and loss 16.6311498531
+	Epoch 26 took 78.5427463054657 seconds and loss 16.3896083433
+	Epoch 27 took 78.97339296340942 seconds and loss 16.6522362953
+	Epoch 28 took 78.48105716705322 seconds and loss 16.63831507
+	Epoch 29 took 78.85728526115417 seconds and loss 16.615725311
+	Epoch 30 took 78.3191614151001 seconds and loss 16.5285665601
+Test accuracy on legitimate test examples: 0.9728
+Test accuracy on adversarial examples: 0.9731
+Completed model training.
+
+Test accuracy is 97.200012207 percent
+checking for epsilon = 0.1
+Test accuracy on adversarial examples: 0.6031
+now trying to use adversarial training
+variables initialized
+	Epoch 1 took 79.4346010684967 seconds and loss 177.327685281
+	Epoch 2 took 79.7134222984314 seconds and loss 107.129980433
+	Epoch 3 took 79.85406374931335 seconds and loss 71.3103408725
+	Epoch 4 took 79.90400052070618 seconds and loss 55.336876195
+	Epoch 5 took 80.06275272369385 seconds and loss 52.5757884358
+	Epoch 6 took 79.47533059120178 seconds and loss 50.8680227368
+	Epoch 7 took 79.54574227333069 seconds and loss 49.7162202658
+	Epoch 8 took 79.59835076332092 seconds and loss 48.9246105194
+	Epoch 9 took 79.43033838272095 seconds and loss 44.5366616205
+	Epoch 10 took 79.65191102027893 seconds and loss 19.7573393267
+	Epoch 11 took 79.78587126731873 seconds and loss 18.8896599703
+	Epoch 12 took 79.8417010307312 seconds and loss 18.5006499867
+	Epoch 13 took 79.1471016407013 seconds and loss 18.0609405872
+	Epoch 14 took 79.3924126625061 seconds and loss 17.9466877937
+	Epoch 15 took 79.50366973876953 seconds and loss 17.7098025655
+	Epoch 16 took 78.96483421325684 seconds and loss 17.4616030227
+	Epoch 17 took 79.33690333366394 seconds and loss 17.4184761247
+	Epoch 18 took 79.19233965873718 seconds and loss 17.3780492317
+	Epoch 19 took 79.29229879379272 seconds and loss 17.1493933655
+	Epoch 20 took 79.72857618331909 seconds and loss 17.2151685715
+	Epoch 21 took 79.74438762664795 seconds and loss 17.1529711701
+	Epoch 22 took 79.29606413841248 seconds and loss 17.0080644408
+	Epoch 23 took 78.988689661026 seconds and loss 16.8663807603
+	Epoch 24 took 79.83747386932373 seconds and loss 17.0965359643
+	Epoch 25 took 79.43915033340454 seconds and loss 17.0256315675
+	Epoch 26 took 79.54126787185669 seconds and loss 16.9651184215
+	Epoch 27 took 79.11025547981262 seconds and loss 16.8501498355
+	Epoch 28 took 79.07426023483276 seconds and loss 16.8068971412
+	Epoch 29 took 79.35676264762878 seconds and loss 16.6842056718
+	Epoch 30 took 79.04448509216309 seconds and loss 16.4032559217
+Test accuracy on legitimate test examples: 0.9757
+Test accuracy on adversarial examples: 0.9743
+Completed model training.
+
+Test accuracy is 97.200012207 percent
+checking for epsilon = 0.3
+Test accuracy on adversarial examples: 0.0674
+now trying to use adversarial training
+variables initialized
+	Epoch 1 took 79.45659136772156 seconds and loss 106.440464104
+	Epoch 2 took 79.56879329681396 seconds and loss 40.2876372249
+	Epoch 3 took 79.45046591758728 seconds and loss 31.9319948973
+	Epoch 4 took 79.56172227859497 seconds and loss 27.6446345595
+	Epoch 5 took 79.43777441978455 seconds and loss 24.9115095959
+	Epoch 6 took 79.26320195198059 seconds and loss 23.3680006249
+	Epoch 7 took 79.45448088645935 seconds and loss 22.0901583738
+	Epoch 8 took 80.00298571586609 seconds and loss 21.3582694542
+	Epoch 9 took 79.42827367782593 seconds and loss 20.8599922335
+	Epoch 10 took 79.27115178108215 seconds and loss 20.230055279
+	Epoch 11 took 78.8381085395813 seconds and loss 20.066528012
+	Epoch 12 took 79.26694202423096 seconds and loss 19.8192114763
+	Epoch 13 took 79.39683532714844 seconds and loss 19.4868799143
+	Epoch 14 took 79.26459455490112 seconds and loss 19.0608929434
+	Epoch 15 took 79.90378284454346 seconds and loss 19.3770735718
+	Epoch 16 took 79.22256755828857 seconds and loss 19.1431808183
+	Epoch 17 took 79.68770122528076 seconds and loss 19.0017703189
+	Epoch 18 took 79.47107195854187 seconds and loss 18.6865184961
+	Epoch 19 took 79.39335942268372 seconds and loss 18.7105432466
+	Epoch 20 took 79.0213680267334 seconds and loss 18.7503947458
+	Epoch 21 took 79.96433448791504 seconds and loss 18.7108850878
+	Epoch 22 took 79.08952927589417 seconds and loss 18.6685152564
+	Epoch 23 took 79.0533127784729 seconds and loss 18.7251010873
+	Epoch 24 took 79.22834348678589 seconds and loss 18.5802435631
+	Epoch 25 took 79.13955569267273 seconds and loss 18.6604697538
+	Epoch 26 took 79.47766971588135 seconds and loss 18.3181921759
+	Epoch 27 took 78.97714805603027 seconds and loss 18.4916843947
+	Epoch 28 took 79.3321042060852 seconds and loss 18.3920774992
+	Epoch 29 took 79.44979596138 seconds and loss 18.468886473
+	Epoch 30 took 78.91706824302673 seconds and loss 18.471327378
+Test accuracy on legitimate test examples: 0.9743
+Test accuracy on adversarial examples: 0.9642
+Completed model training.
+
+Test accuracy is 97.200012207 percent
+checking for epsilon = 0.5
+Test accuracy on adversarial examples: 0.0426
+now trying to use adversarial training
+variables initialized
+	Epoch 1 took 79.92477536201477 seconds and loss 86.1154185983
+	Epoch 2 took 79.65718841552734 seconds and loss 45.1266173163
+	Epoch 3 took 79.176513671875 seconds and loss 36.9830706264
+	Epoch 4 took 79.39606404304504 seconds and loss 32.1511476539
+	Epoch 5 took 79.25776362419128 seconds and loss 29.2490433493
+	Epoch 6 took 79.01027131080627 seconds and loss 27.1787465739
+	Epoch 7 took 78.97979927062988 seconds and loss 25.6306996523
+	Epoch 8 took 78.95607042312622 seconds and loss 24.6261597389
+	Epoch 9 took 79.37491226196289 seconds and loss 23.7409439353
+	Epoch 10 took 79.66718006134033 seconds and loss 23.3769849445
+	Epoch 11 took 79.0531919002533 seconds and loss 22.9501266014
+	Epoch 12 took 78.82569336891174 seconds and loss 22.3691668976
+	Epoch 13 took 78.67158627510071 seconds and loss 22.0954871178
+	Epoch 14 took 79.05600166320801 seconds and loss 21.8635897792
+	Epoch 15 took 78.46766376495361 seconds and loss 21.6581329989
+	Epoch 16 took 79.24109435081482 seconds and loss 21.4115773489
+	Epoch 17 took 79.36415386199951 seconds and loss 21.7699484781
+	Epoch 18 took 79.09753584861755 seconds and loss 21.4769185177
+	Epoch 19 took 79.06439208984375 seconds and loss 21.207954633
+	Epoch 20 took 78.75492072105408 seconds and loss 21.0471947515
+	Epoch 21 took 79.10942196846008 seconds and loss 20.8915201986
+	Epoch 22 took 79.26483416557312 seconds and loss 20.8979941324
+	Epoch 23 took 78.63060069084167 seconds and loss 20.7575380458
+	Epoch 24 took 78.44195508956909 seconds and loss 20.8999534829
+	Epoch 25 took 79.16804957389832 seconds and loss 20.7352670825
+	Epoch 26 took 79.25834822654724 seconds and loss 20.6476372142
+	Epoch 27 took 79.07146668434143 seconds and loss 20.593686401
+	Epoch 28 took 78.76055526733398 seconds and loss 20.6136816468
+	Epoch 29 took 79.02176213264465 seconds and loss 20.9520376095
+	Epoch 30 took 78.67815732955933 seconds and loss 20.865267503
+Test accuracy on legitimate test examples: 0.9739
+Test accuracy on adversarial examples: 0.9567
+Completed model training.
+

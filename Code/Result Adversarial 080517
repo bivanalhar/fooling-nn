@@ -1,0 +1,113 @@
+Discrete Neural Network (Test Accuracy = 95.650011301 percent)
+
+checking for epsilon = 0.0
+Test accuracy on adversarial examples: 0.9565
+precision rate of the adversarial towards true is 100.0
+
+checking for epsilon = 0.05
+Test accuracy on adversarial examples: 0.8099
+precision rate of the adversarial towards true is 83.02143230527966
+
+checking for epsilon = 0.07
+Test accuracy on adversarial examples: 0.6801
+precision rate of the adversarial towards true is 69.44066910611605
+
+checking for epsilon = 0.1
+Test accuracy on adversarial examples: 0.4772
+precision rate of the adversarial towards true is 48.30109775222164
+
+checking for epsilon = 0.3
+Test accuracy on adversarial examples: 0.2038
+precision rate of the adversarial towards true is 20.031364349189754
+
+checking for epsilon = 0.5
+Test accuracy on adversarial examples: 0.1965
+precision rate of the adversarial towards true is 19.383167799268165
+
+
+-----------------------------------------------------------------------------------
+Vanilla MLP (accuracy = 97.19 percent)
+
+checking for epsilon = 0.0
+Test accuracy on adversarial examples: 0.9719
+precision rate of the  100.0
+
+checking for epsilon = 0.05
+Test accuracy on adversarial examples: 0.7191
+precision rate of the  71.96213602222451
+
+checking for epsilon = 0.07
+Test accuracy on adversarial examples: 0.4644
+precision rate of the  45.7557361868505
+
+checking for epsilon = 0.1
+Test accuracy on adversarial examples: 0.1699
+precision rate of the  15.464553966457453
+
+checking for epsilon = 0.3
+Test accuracy on adversarial examples: 0.0179
+precision rate of the  0.0
+
+checking for epsilon = 0.5
+Test accuracy on adversarial examples: 0.0168
+precision rate of the  0.0
+
+
+-----------------------------------------------------------------------------------
+Discrete Neural Network with 2 Gradients (accuracy = 96.26 percent)
+
+checking for epsilon = 0.0
+Test accuracy on adversarial examples: 0.9626
+precision rate of the adversarial towards true is 100.0
+
+checking for epsilon = 0.05
+Test accuracy on adversarial examples: 0.7679
+precision rate of the adversarial towards true is 77.58154996883441
+
+checking for epsilon = 0.07
+Test accuracy on adversarial examples: 0.6337
+precision rate of the adversarial towards true is 63.41159360066486
+
+checking for epsilon = 0.1
+Test accuracy on adversarial examples: 0.4666
+precision rate of the adversarial towards true is 45.823810513193436
+
+checking for epsilon = 0.3
+Test accuracy on adversarial examples: 0.0539
+precision rate of the adversarial towards true is 2.2543112403906087
+
+checking for epsilon = 0.5
+Test accuracy on adversarial examples: 0.0344
+precision rate of the adversarial towards true is 0.31165593185123625
+
+
+------------------------------------------------------------------------------------
+Blended Discrete NN (accuracy = 95.65 percent)
+
+checking for epsilon = 0.0
+Test accuracy on adversarial examples: 0.9565
+precision rate of the adversarial towards true is 100.0
+
+checking for epsilon = 0.05
+Test accuracy on adversarial examples: 0.7838
+precision rate of the adversarial towards true is 79.83272347098797
+
+checking for epsilon = 0.07
+Test accuracy on adversarial examples: 0.6261
+precision rate of the adversarial towards true is 63.10507056978568
+
+checking for epsilon = 0.1
+Test accuracy on adversarial examples: 0.3777
+precision rate of the adversarial towards true is 36.94720334553058
+
+checking for epsilon = 0.3
+Test accuracy on adversarial examples: 0.0328
+precision rate of the adversarial towards true is 0.8677469942498693
+
+checking for epsilon = 0.5
+Test accuracy on adversarial examples: 0.0239
+precision rate of the adversarial towards true is 0.0836382645060115
+
+
+
+

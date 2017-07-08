@@ -1,0 +1,105 @@
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.0 and eps_iter 0.01 (5)
+precision rate of the adversarial towards true is 99.75440032746623
+the accuracy of the adversarial examples in masked is 0.9775
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.0 and eps_iter 0.03 (5)
+precision rate of the adversarial towards true is 99.75440032746623
+the accuracy of the adversarial examples in masked is 0.9775
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.0 and eps_iter 0.05 (5)
+precision rate of the adversarial towards true is 99.75440032746623
+the accuracy of the adversarial examples in masked is 0.9775
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.05 and eps_iter 0.01 (9)
+Test accuracy on adversarial examples: 0.7625
+precision rate of the adversarial towards true is 78.9193614408514
+the accuracy of the adversarial examples in masked is 0.7861
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.05 and eps_iter 0.03 (13)
+Test accuracy on adversarial examples: 0.7537
+precision rate of the adversarial towards true is 79.23659435120753
+the accuracy of the adversarial examples in masked is 0.7894
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.05 and eps_iter 0.05 (13)
+Test accuracy on adversarial examples: 0.7533
+precision rate of the adversarial towards true is 79.1751944330741
+the accuracy of the adversarial examples in masked is 0.7888
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.07 and eps_iter 0.01 (11)
+Test accuracy on adversarial examples: 0.5133
+precision rate of the adversarial towards true is 60.5403192795743
+the accuracy of the adversarial examples in masked is 0.6066
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.07 and eps_iter 0.03 (13)
+Test accuracy on adversarial examples: 0.4788
+precision rate of the adversarial towards true is 58.6676217765043
+the accuracy of the adversarial examples in masked is 0.5882
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.07 and eps_iter 0.05 (11)
+Test accuracy on adversarial examples: 0.4759
+precision rate of the adversarial towards true is 58.48342202210397
+the accuracy of the adversarial examples in masked is 0.5865
+
+Test accuracy is 97.7200210094 percent
+checking for epsilon = 0.1 and eps_iter 0.01 (15)
+Test accuracy on adversarial examples: 0.2125
+precision rate of the adversarial towards true is 28.203029062627916
+the accuracy of the adversarial examples in masked is 0.2909
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.1 and eps_iter 0.03 (21)
+Test accuracy on adversarial examples: 0.1765
+precision rate of the adversarial towards true is 27.10806385591486
+the accuracy of the adversarial examples in masked is 0.2802
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.1 and eps_iter 0.05 (19)
+Test accuracy on adversarial examples: 0.1711
+precision rate of the adversarial towards true is 27.916496111338517
+the accuracy of the adversarial examples in masked is 0.288
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.3 and eps_iter 0.01 (25)
+Test accuracy on adversarial examples: 0.2125
+precision rate of the adversarial towards true is 30.413426115431847
+the accuracy of the adversarial examples in masked is 0.3126
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.3 and eps_iter 0.03 (23)
+Test accuracy on adversarial examples: 0.0149
+precision rate of the adversarial towards true is 0.010233319688907082
+the accuracy of the adversarial examples in masked is 0.0152
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.3 and eps_iter 0.05 (11)
+Test accuracy on adversarial examples: 0.015
+precision rate of the adversarial towards true is 0.0
+the accuracy of the adversarial examples in masked is 0.015
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.5 and eps_iter 0.01 (25)
+Test accuracy on adversarial examples: 0.2125
+precision rate of the adversarial towards true is 30.413426115431847
+the accuracy of the adversarial examples in masked is 0.3126
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.5 and eps_iter 0.03 (21)
+Test accuracy on adversarial examples: 0.0149
+precision rate of the adversarial towards true is 0.010233319688907082
+the accuracy of the adversarial examples in masked is 0.0152
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.5 and eps_iter 0.05 (11)
+Test accuracy on adversarial examples: 0.015
+precision rate of the adversarial towards true is 0.0
+the accuracy of the adversarial examples in masked is 0.015
+

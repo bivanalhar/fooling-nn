@@ -1,0 +1,11 @@
+(Testing on 150 test images)
+Test accuracy is 95.8400130272 percent
+Execution time for adv. examples 921.9074 seconds
+Avg. rate of successful adv. examples 0.7987
+
+(Testing on 100 test images)
+Test accuracy is 95.8400130272 percent
+Execution time for adv. examples 554.2554 seconds
+Avg. rate of successful adv. examples 0.8096
+
+

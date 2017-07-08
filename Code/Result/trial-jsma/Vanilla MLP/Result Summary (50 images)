@@ -1,0 +1,120 @@
+Test accuracy is 97.1900165081 percent
+
+theta 0.1 gamma 0.05
+Execution time for adv. examples 83.2882 seconds
+Avg. rate of successful adv. examples 0.0019
+Avg. rate of successful robust examples 0.9981
+Avg. rate of still-correct examples 0.9981
+Avg. rate of perturbed features 0.0436
+
+-------------------------------------------------------------------------------
+theta 0.1 gamma 0.07
+Execution time for adv. examples 118.0705 seconds
+Avg. rate of successful adv. examples 0.0019
+Avg. rate of successful robust examples 0.9981
+Avg. rate of still-correct examples 0.9981
+Avg. rate of perturbed features 0.0619
+
+-------------------------------------------------------------------------------
+theta 0.1 gamma 0.1
+Execution time for adv. examples 170.0453 seconds
+Avg. rate of successful adv. examples 0.0056
+Avg. rate of successful robust examples 0.9870
+Avg. rate of still-correct examples 0.9870
+Avg. rate of perturbed features 0.0893
+
+-------------------------------------------------------------------------------
+theta 0.3 gamma 0.05
+Execution time for adv. examples 81.7781 seconds
+Avg. rate of successful adv. examples 0.0630
+Avg. rate of successful robust examples 0.9130
+Avg. rate of still-correct examples 0.9130
+Avg. rate of perturbed features 0.0429
+
+-------------------------------------------------------------------------------
+theta 0.3 gamma 0.07
+Execution time for adv. examples 112.3725 seconds
+Avg. rate of successful adv. examples 0.1556
+Avg. rate of successful robust examples 0.8056
+Avg. rate of still-correct examples 0.8056
+Avg. rate of perturbed features 0.0594
+
+-------------------------------------------------------------------------------
+theta 0.3 gamma 0.1
+Execution time for adv. examples 150.7336 seconds
+Avg. rate of successful adv. examples 0.3444
+Avg. rate of successful robust examples 0.6056
+Avg. rate of still-correct examples 0.6056
+Avg. rate of perturbed features 0.0804
+
+-------------------------------------------------------------------------------
+theta 0.5 gamma 0.05
+Execution time for adv. examples 74.3834 seconds
+Avg. rate of successful adv. examples 0.3519
+Avg. rate of successful robust examples 0.5778
+Avg. rate of still-correct examples 0.5778
+Avg. rate of perturbed features 0.0395
+
+-------------------------------------------------------------------------------
+theta 0.5 gamma 0.07
+Execution time for adv. examples 93.6049 seconds
+Avg. rate of successful adv. examples 0.5648
+Avg. rate of successful robust examples 0.3463
+Avg. rate of still-correct examples 0.3463
+Avg. rate of perturbed features 0.0496
+
+-------------------------------------------------------------------------------
+theta 0.5 gamma 0.1
+Execution time for adv. examples 111.4260 seconds
+Avg. rate of successful adv. examples 0.7167
+Avg. rate of successful robust examples 0.1759
+Avg. rate of still-correct examples 0.1759
+Avg. rate of perturbed features 0.0592
+
+-------------------------------------------------------------------------------
+theta 0.7 gamma 0.05
+Execution time for adv. examples 65.0841 seconds
+Avg. rate of successful adv. examples 0.6241
+Avg. rate of successful robust examples 0.2537
+Avg. rate of still-correct examples 0.2537
+Avg. rate of perturbed features 0.0339
+
+-------------------------------------------------------------------------------
+theta 0.7 gamma 0.07
+Execution time for adv. examples 75.5102 seconds
+Avg. rate of successful adv. examples 0.7722
+Avg. rate of successful robust examples 0.1148
+Avg. rate of still-correct examples 0.1148
+Avg. rate of perturbed features 0.0396
+
+-------------------------------------------------------------------------------
+theta 0.7 gamma 0.1
+Execution time for adv. examples 84.3535 seconds
+Avg. rate of successful adv. examples 0.8796
+Avg. rate of successful robust examples 0.0648
+Avg. rate of still-correct examples 0.0648
+Avg. rate of perturbed features 0.0444
+
+-------------------------------------------------------------------------------
+theta 1.0 gamma 0.05
+Execution time for adv. examples 52.7600 seconds
+Avg. rate of successful adv. examples 0.7981
+Avg. rate of successful robust examples 0.0870
+Avg. rate of still-correct examples 0.0870
+Avg. rate of perturbed features 0.0270
+
+-------------------------------------------------------------------------------
+theta 1.0 gamma 0.07
+Execution time for adv. examples 59.6007 seconds
+Avg. rate of successful adv. examples 0.8907
+Avg. rate of successful robust examples 0.0481
+Avg. rate of still-correct examples 0.0481
+Avg. rate of perturbed features 0.0299
+
+-------------------------------------------------------------------------------
+theta 1.0 gamma 0.1
+Execution time for adv. examples 64.2611 seconds
+Avg. rate of successful adv. examples 0.9519
+Avg. rate of successful robust examples 0.0204
+Avg. rate of still-correct examples 0.0204
+Avg. rate of perturbed features 0.0320

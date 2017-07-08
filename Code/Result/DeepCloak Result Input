@@ -1,0 +1,109 @@
+Number of features to be removed = 7
+
+testing with epsilon 0.0
+the accuracy for the adversarial examples is 0.9778
+the accuracy of the adversarial examples in masked is 0.9778
+
+testing with epsilon 0.05
+the accuracy for the adversarial examples is 0.7588
+the accuracy of the adversarial examples in masked is 0.7588
+
+testing with epsilon 0.07
+the accuracy for the adversarial examples is 0.5212
+the accuracy of the adversarial examples in masked is 0.5212
+
+testing with epsilon 0.1
+the accuracy for the adversarial examples is 0.2168
+the accuracy of the adversarial examples in masked is 0.2168
+
+testing with epsilon 0.3
+the accuracy for the adversarial examples is 0.0146
+the accuracy of the adversarial examples in masked is 0.0146
+
+testing with epsilon 0.5
+the accuracy for the adversarial examples is 0.0122
+the accuracy of the adversarial examples in masked is 0.0122
+
+------------------------------------------------------------------------------------
+Number of features to be removed = 21
+
+testing with epsilon 0.0
+the accuracy for the adversarial examples is 0.9778
+the accuracy of the adversarial examples in masked is 0.9778
+
+testing with epsilon 0.05
+the accuracy for the adversarial examples is 0.7588
+the accuracy of the adversarial examples in masked is 0.7597
+
+testing with epsilon 0.07
+the accuracy for the adversarial examples is 0.5212
+the accuracy of the adversarial examples in masked is 0.522
+
+testing with epsilon 0.1
+the accuracy for the adversarial examples is 0.2168
+the accuracy of the adversarial examples in masked is 0.218
+
+testing with epsilon 0.3
+the accuracy for the adversarial examples is 0.0146
+the accuracy of the adversarial examples in masked is 0.0146
+
+testing with epsilon 0.5
+the accuracy for the adversarial examples is 0.0122
+the accuracy of the adversarial examples in masked is 0.0123
+
+------------------------------------------------------------------------------------
+Number of features to be removed = 35
+
+testing with epsilon 0.0
+the accuracy for the adversarial examples is 0.9778
+the accuracy of the adversarial examples in masked is 0.9778
+
+testing with epsilon 0.05
+the accuracy for the adversarial examples is 0.7588
+the accuracy of the adversarial examples in masked is 0.7597
+
+testing with epsilon 0.07
+the accuracy for the adversarial examples is 0.5212
+the accuracy of the adversarial examples in masked is 0.5228
+
+testing with epsilon 0.1
+the accuracy for the adversarial examples is 0.2168
+the accuracy of the adversarial examples in masked is 0.2191
+
+testing with epsilon 0.3
+the accuracy for the adversarial examples is 0.0146
+the accuracy of the adversarial examples in masked is 0.0146
+
+testing with epsilon 0.5
+the accuracy for the adversarial examples is 0.0122
+the accuracy of the adversarial examples in masked is 0.0124
+
+-------------------------------------------------------------------------------------
+Number of features to be removed = 49
+
+testing with epsilon 0.0
+the accuracy for the adversarial examples is 0.9778
+the accuracy of the adversarial examples in masked is 0.9778
+
+testing with epsilon 0.05
+the accuracy for the adversarial examples is 0.7588
+the accuracy of the adversarial examples in masked is 0.7613
+
+testing with epsilon 0.07
+the accuracy for the adversarial examples is 0.5212
+the accuracy of the adversarial examples in masked is 0.5271
+
+testing with epsilon 0.1
+the accuracy for the adversarial examples is 0.2168
+the accuracy of the adversarial examples in masked is 0.2223
+
+testing with epsilon 0.3
+the accuracy for the adversarial examples is 0.0146
+the accuracy of the adversarial examples in masked is 0.0146
+
+testing with epsilon 0.5
+the accuracy for the adversarial examples is 0.0122
+the accuracy of the adversarial examples in masked is 0.0124
+
+
+

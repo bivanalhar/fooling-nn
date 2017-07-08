@@ -69,53 +69,53 @@ semi_step = np.vectorize(scalar_semi_step)
 
 #defining its derivative
 def derivative_semistep(x_input):
-	x_frac = x_input % 1
-	start_constant = 1.0 / act_grad
+    x_frac = x_input % 1
+    start_constant = 1.0 / act_grad
 
-	if (x_input < 0 or x_input > upper_bound):
-		return 1e-10
-	elif x_frac <= start_constant:
-		return act_grad
-	else:
-		return 1e-10
+    if (x_input < 0 or x_input > upper_bound):
+        return 0
+    elif x_frac <= start_constant:
+        return act_grad
+    else:
+        return 0
 
 d_semistep = np.vectorize(derivative_semistep)
 d_semistep32 = lambda x: d_semistep(x).astype(np.float32)
 
 def tf_d_semistep(x_input, name=None):
-	with ops.name_scope(name, "d_semistep", [x_input]) as name:
-		y = tf.py_func(d_semistep32, [x_input], [tf.float32], name=name, stateful=False)
-		return y[0]
+    with ops.name_scope(name, "d_semistep", [x_input]) as name:
+        y = tf.py_func(d_semistep32, [x_input], [tf.float32], name=name, stateful=False)
+        return y[0]
 
 def py_func(func, inp, Tout, stateful=True, name=None, grad=None):
 
-	rnd_name = 'PyFuncGrad' + str(np.random.randint(0, 1e+8))
-	tf.RegisterGradient(rnd_name)(grad)
-	g = tf.get_default_graph()
+    rnd_name = 'PyFuncGrad' + str(np.random.randint(0, 1e+8))
+    tf.RegisterGradient(rnd_name)(grad)
+    g = tf.get_default_graph()
 
-	with g.gradient_override_map({"PyFunc" : rnd_name}):
-		return tf.py_func(func, inp, Tout, stateful = stateful, name=name)
+    with g.gradient_override_map({"PyFunc" : rnd_name}):
+        return tf.py_func(func, inp, Tout, stateful = stateful, name=name)
 
 def semistep_grad(op, grad):
-	x_input = op.inputs[0]
+    x_input = op.inputs[0]
 
-	n_grad = tf_d_semistep(x_input)
-	return grad * n_grad
+    n_grad = tf_d_semistep(x_input)
+    return grad * n_grad
 
 semi_step32 = lambda x: semi_step(x).astype(np.float32)
 
 def tf_semistep(x_input, name=None):
-	with ops.name_scope(name, "semi_step", [x_input]) as name:
-		y = py_func(semi_step32, [x_input], [tf.float32], name=name, grad=semistep_grad)
-		return y[0]
+    with ops.name_scope(name, "semi_step", [x_input]) as name:
+        y = py_func(semi_step32, [x_input], [tf.float32], name=name, grad=semistep_grad)
+        return y[0]
 
 def semi_network(x):
     # x_input = tf.reshape(x, (-1, 784))
     layer_1 = tf.add(tf.matmul(x, w1), b1)
-    layer_1 = tf_semistep(layer_1)
+    layer_1 = tf.nn.relu(layer_1)
 
     layer_out = tf.add(tf.matmul(layer_1, w_out), b_out)
-    layer_out = tf_semistep(layer_out)
+    layer_out = tf.nn.relu(layer_out)
 
     return tf.nn.softmax(layer_out)
 
@@ -130,13 +130,13 @@ b_out = tf.get_variable("b_out", shape = [n_classes], initializer = tf.contrib.l
 prediction = semi_network(x)
 
 with tf.device("/gpu:0"):
-	cross_entropy = -tf.reduce_sum(y * tf.log(tf.clip_by_value(prediction,1e-10,1.0)))
+    cross_entropy = -tf.reduce_sum(y * tf.log(tf.clip_by_value(prediction,1e-10,1.0)))
 
-	if l2_regularize:
-	    cost = tf.reduce_mean(cross_entropy) + reg_param * (tf.nn.l2_loss(w1) + tf.nn.l2_loss(w_out) + tf.nn.l2_loss(b1) + tf.nn.l2_loss(b_out))
-	else:
-	    cost = tf.reduce_mean(cross_entropy)
-	# cost = tf.Print(cost, [cost], "cost = ", summarize = 30)
+    if l2_regularize:
+        cost = tf.reduce_mean(cross_entropy) + reg_param * (tf.nn.l2_loss(w1) + tf.nn.l2_loss(w_out) + tf.nn.l2_loss(b1) + tf.nn.l2_loss(b_out))
+    else:
+        cost = tf.reduce_mean(cross_entropy)
+    # cost = tf.Print(cost, [cost], "cost = ", summarize = 30)
 optimizer = tf.train.AdamOptimizer(learning_rate = FLAGS.learning_rate).minimize(cost)
 
 with tf.device("/gpu:0"):
@@ -145,9 +145,9 @@ with tf.device("/gpu:0"):
     # Calculate accuracy
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
 
-grad_list = [2, 4, 8]
+grad_list = [2, 4]
 upperbound_list = [15, 20]
-eps_list = [0.3]
+eps_list = [0.0, 0.05, 0.07, 0.1, 0.3, 0.5]
 batch_size = FLAGS.batch_size
 
 #Initializing the variables
@@ -163,7 +163,7 @@ current_val_acc = 0.0
 # the network for the MNIST discrete will be saved in mnist_discrete.ckpt
 # as for the MLP, it will be saved in mnist_vanilla.ckpt
 saver = tf.train.Saver()
-save_path = os.path.join("/tmp", "mnist_discrete.ckpt")
+save_path = os.path.join("/tmp", "mnist_vanilla.ckpt")
 
 if FLAGS.train_mode:
     for upper in upperbound_list:
@@ -180,7 +180,7 @@ if FLAGS.train_mode:
                     act_grad = grad_act
                     upper_bound = upper
 
-                    # print("currently checking for the upper bound " + str(upper_bound) + " and gradient " + str(act_grad))
+                    print("currently checking for the upper bound " + str(upper_bound) + " and gradient " + str(act_grad))
 
                     #Begin the training phase, by using only the legitimate training samples
                     for epoch in range(training_epochs):
@@ -215,78 +215,80 @@ else:
     act_grad = 2
     upper_bound = 20
 
-    count_true = 0
-    count_adv = 0
-
     for epsilon in eps_list:
+
+        count_true = 0
+        count_adv = 0
+
         with tf.Session() as sess:
             saver.restore(sess, save_path)
             test_acc = sess.run(accuracy, feed_dict={x : mnist.test.images, y : mnist.test.labels})
             print("Test accuracy is " + str(100 * test_acc) + " percent")
 
-            #now creating the JSMA approach (Jacobian-based Saliency Map Approach)
-            result_overall = np.zeros((FLAGS.nb_classes, FLAGS.source_samples), dtype = 'i')
-            perturb_overall = np.zeros((FLAGS.nb_classes, FLAGS.source_samples), dtype = 'f')
+            # #now creating the JSMA approach (Jacobian-based Saliency Map Approach)
+            # result_overall = np.zeros((FLAGS.nb_classes, FLAGS.source_samples), dtype = 'i')
+            # perturb_overall = np.zeros((FLAGS.nb_classes, FLAGS.source_samples), dtype = 'f')
 
-            # grid_shape = (n_classes, n_classes, 28, 28, 1)
-            # grid_viz_data = np.zeros(grid_shape, dtype = 'f')
+            # # grid_shape = (n_classes, n_classes, 28, 28, 1)
+            # # grid_viz_data = np.zeros(grid_shape, dtype = 'f')
 
-            start_time = time.time()
-            jsma = SaliencyMapMethod(semi_network, back='tf', sess=sess)
-            for i in xrange(0, FLAGS.source_samples):
-                current_class = int(np.argmax(mnist.test.labels[i:(i+1)]))
-                target_class = other_classes(FLAGS.nb_classes, current_class)
+            # start_time = time.time()
+            # jsma = SaliencyMapMethod(semi_network, back='tf', sess=sess)
+            # for i in xrange(0, FLAGS.source_samples):
+            #     current_class = int(np.argmax(mnist.test.labels[i:(i+1)]))
+            #     target_class = other_classes(FLAGS.nb_classes, current_class)
 
-                for target in target_class:
-                    one_hot_target = np.zeros((1, FLAGS.nb_classes), dtype = np.float32)
-                    one_hot_target[0, target] = 1
-                    jsma_params = {'theta': 1., 'gamma': 0.1,
-                                'nb_classes': FLAGS.nb_classes, 'clip_min': 0.,
-                                'clip_max': 1., 'targets': y,
-                                'y_val': one_hot_target}
-                    adv_x = jsma.generate_np(mnist.test.images[i:i+1], **jsma_params)
+            #     for target in target_class:
+            #         one_hot_target = np.zeros((1, FLAGS.nb_classes), dtype = np.float32)
+            #         one_hot_target[0, target] = 1
+            #         jsma_params = {'theta': 1., 'gamma': 0.1,
+            #                     'nb_classes': FLAGS.nb_classes, 'clip_min': 0.,
+            #                     'clip_max': 1., 'targets': y,
+            #                     'y_val': one_hot_target}
+            #         adv_x = jsma.generate_np(mnist.test.images[i:i+1], **jsma_params)
 
-                    #checking for the success rate
-                    res = int(model_argmax(sess, x, prediction, adv_x) == target)
+            #         #checking for the success rate
+            #         res = int(model_argmax(sess, x, prediction, adv_x) == target)
 
-                    result_overall[target, i] = res
+            #         result_overall[target, i] = res
 
-            n_targets_tried = (n_classes - 1) * FLAGS.source_samples
-            success_rate = float(np.sum(result_overall)) / n_targets_tried
-            print('Execution time for adv. examples {0:.4f} seconds'.format(time.time() - start_time))
-            print('Avg. rate of successful adv. examples {0:.4f}'.format(success_rate))
+            # n_targets_tried = (n_classes - 1) * FLAGS.source_samples
+            # success_rate = float(np.sum(result_overall)) / n_targets_tried
+            # print('Execution time for adv. examples {0:.4f} seconds'.format(time.time() - start_time))
+            # print('Avg. rate of successful adv. examples {0:.4f}'.format(success_rate))
 
 
-#         #firstly testing towards the whole adversarial images
-#         fgsm = FastGradientMethod(semi_network, sess = sess)
-#         fgsm_params = {'eps' : 0.3}
-#         adv_images = fgsm.generate(x, **fgsm_params)
-#         preds_adv = semi_network(adv_images)
+            #firstly testing towards the whole adversarial images
+            print("checking for epsilon = " + str(epsilon))
+            fgsm = FastGradientMethod(semi_network, sess = sess)
+            fgsm_params = {'eps' : epsilon}
+            adv_images = fgsm.generate(x, **fgsm_params)
+            preds_adv = semi_network(adv_images)
 
-#         # adv_images = fgsm(x, prediction, eps = epsilon)
-#         eval_params = {'batch_size': FLAGS.batch_size}
-#         # X_test_adv, = batch_eval(sess, [x], [adv_images], [mnist.test.images], args=eval_params)
-#         # assert X_test_adv.shape[0] == 10000, X_test_adv.shape
+            # adv_images = fgsm(x, prediction, eps = epsilon)
+            eval_params = {'batch_size': FLAGS.batch_size}
+            # X_test_adv, = batch_eval(sess, [x], [adv_images], [mnist.test.images], args=eval_params)
+            # assert X_test_adv.shape[0] == 10000, X_test_adv.shape
 
-#         # Evaluate the accuracy of the MNIST model on adversarial examples
-#         accuracy_adv = model_eval(sess, x, y, preds_adv, mnist.test.images, mnist.test.labels, args=eval_params)
-#         print('Test accuracy on adversarial examples: ' + str(accuracy_adv))
-#         #This time, we are trying to create the adversarial samples by using the FGSM approach
+            # Evaluate the accuracy of the MNIST model on adversarial examples
+            accuracy_adv = model_eval(sess, x, y, preds_adv, mnist.test.images, mnist.test.labels, args=eval_params)
+            print('Test accuracy on adversarial examples: ' + str(accuracy_adv))
+            #This time, we are trying to create the adversarial samples by using the FGSM approach
 
-#         correct_label = sess.run(correct_prediction, feed_dict = {x : mnist.test.images, y : mnist.test.labels})
-#         # print("correct label " + str(correct_label))
-#         correct_adv = model_evalarray(sess, x, y, preds_adv, mnist.test.images, mnist.test.labels,
-#                               args=eval_params)
+            correct_label = sess.run(correct_prediction, feed_dict = {x : mnist.test.images, y : mnist.test.labels})
+            # print("correct label " + str(correct_label))
+            correct_adv = model_evalarray(sess, x, y, preds_adv, mnist.test.images, mnist.test.labels,
+                                  args=eval_params)
 
-#         # print("correct label " + str(correct_label))
-#         # print("correct adversary " + str(correct_adv))
+            # print("correct label " + str(correct_label))
+            # print("correct adversary " + str(correct_adv))
 
-#         for i in range(len(correct_label)):
-#             if correct_label[i] == True and correct_adv[i] == True:
-#                 count_adv += 1.0
-#             if correct_label[i] == True:
-#                 count_true += 1.0
-#         # print(count_adv / count_true)
+            for i in range(len(correct_label)):
+                if correct_label[i] == True and correct_adv[i] == True:
+                    count_adv += 1.0
+                if correct_label[i] == True:
+                    count_true += 1.0
+            # print(count_adv / count_true)
 #         # util.RaiseNotDefined()
 
 #         # print("---------------------------------------------------------")
@@ -325,7 +327,7 @@ else:
 #         #             figure = pair_visual(np.reshape(mnist.test.images[sample_index : (sample_index + 1)], (28, 28)),
 #         #                 np.reshape(adv_x, (28, 28)), name = 'eps ' + str(epsilon) + ' fail 020517-4 disc2 ' + str(sample_index) + ' pred ' + str(class_real) + " adv_label " + str(class_adv) + '.jpg', figure=figure)
 #         # acc_list.append(count_adv / count_true * 100)
-#         print("precision rate of the  " + str(count_adv / count_true * 100))
+            print("precision rate of the  " + str(count_adv / count_true * 100))
 
 # # plt.plot(eps_list, acc_list)
 # # plt.xlabel("Epsilon")

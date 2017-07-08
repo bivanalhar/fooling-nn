@@ -1,0 +1,90 @@
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.0 and eps_iter 0.01
+Test accuracy on adversarial examples: 0.9772
+precision rate of the adversarial towards true is 100.0
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.0 and eps_iter 0.03
+Test accuracy on adversarial examples: 0.9772
+precision rate of the adversarial towards true is 100.0
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.0 and eps_iter 0.05
+Test accuracy on adversarial examples: 0.9772
+precision rate of the adversarial towards true is 100.0
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.05 and eps_iter 0.01
+Test accuracy on adversarial examples: 0.7625
+precision rate of the adversarial towards true is 76.48383135489154
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.05 and eps_iter 0.03
+Test accuracy on adversarial examples: 0.7537
+precision rate of the adversarial towards true is 75.60376586164553
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.05 and eps_iter 0.05
+Test accuracy on adversarial examples: 0.7533
+precision rate of the adversarial towards true is 75.55259926320097
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.07 and eps_iter 0.01
+Test accuracy on adversarial examples: 0.5133
+precision rate of the adversarial towards true is 50.98239869013508
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.07 and eps_iter 0.03
+Test accuracy on adversarial examples: 0.4788
+precision rate of the adversarial towards true is 47.45190339746214
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.07 and eps_iter 0.05
+Test accuracy on adversarial examples: 0.4759
+precision rate of the adversarial towards true is 47.15513712648383
+
+Test accuracy is 97.7200210094 percent
+checking for epsilon = 0.1 and eps_iter 0.01
+Test accuracy on adversarial examples: 0.2125
+precision rate of the adversarial towards true is 20.20057306590258
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.1 and eps_iter 0.03
+Test accuracy on adversarial examples: 0.1765
+precision rate of the adversarial towards true is 16.51657797789603
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.1 and eps_iter 0.05
+Test accuracy on adversarial examples: 0.1711
+precision rate of the adversarial towards true is 15.963978714695045
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.3 and eps_iter 0.01
+Test accuracy on adversarial examples: 0.2125
+precision rate of the adversarial towards true is 20.20057306590258
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.3 and eps_iter 0.03
+Test accuracy on adversarial examples: 0.0149
+precision rate of the adversarial towards true is 0.0
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.3 and eps_iter 0.05
+Test accuracy on adversarial examples: 0.015
+precision rate of the adversarial towards true is 0.0
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.5 and eps_iter 0.01
+Test accuracy on adversarial examples: 0.2125
+precision rate of the adversarial towards true is 20.20057306590258
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.5 and eps_iter 0.03
+Test accuracy on adversarial examples: 0.0149
+precision rate of the adversarial towards true is 0.0
+
+Test accuracy is 97.720015049 percent
+checking for epsilon = 0.5 and eps_iter 0.05
+Test accuracy on adversarial examples: 0.015
+precision rate of the adversarial towards true is 0.0
+

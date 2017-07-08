@@ -1,0 +1,35 @@
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.0
+
+Test accuracy of oracle on adversarial examples generated using the substitute: 0.151515151533
+
+
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.05
+
+Test accuracy of oracle on adversarial examples generated using the substitute: 0.0931313131494
+
+
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.07
+
+Test accuracy of oracle on adversarial examples generated using the substitute: 0.0810101010252
+
+
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.1
+
+Test accuracy of oracle on adversarial examples generated using the substitute: 0.0508080808081
+
+
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.3
+
+Test accuracy of oracle on adversarial examples generated using the substitute: 0.0940404040494
+
+
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.5
+
+Test accuracy of oracle on adversarial examples generated using the substitute: 0.113232323238
+

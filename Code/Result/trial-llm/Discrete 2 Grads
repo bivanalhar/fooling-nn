@@ -1,0 +1,107 @@
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.0 and eps_iter 0.01
+Test accuracy on adversarial examples: 0.9701
+precision rate of the adversarial towards true is 100.0
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.0 and eps_iter 0.03
+Test accuracy on adversarial examples: 0.9701
+precision rate of the adversarial towards true is 100.0
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.0 and eps_iter 0.05
+Test accuracy on adversarial examples: 0.9701
+precision rate of the adversarial towards true is 100.0
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100224018 percent
+checking for epsilon = 0.05 and eps_iter 0.01
+Test accuracy on adversarial examples: 0.9649
+precision rate of the adversarial towards true is 99.16503453252243
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.05 and eps_iter 0.03
+Test accuracy on adversarial examples: 0.9579
+precision rate of the adversarial towards true is 98.35068549634059
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.05 and eps_iter 0.05
+Test accuracy on adversarial examples: 0.9521
+precision rate of the adversarial towards true is 97.79404185135553
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.07 and eps_iter 0.01
+Test accuracy on adversarial examples: 0.965
+precision rate of the adversarial towards true is 99.13410988557881
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100224018 percent
+checking for epsilon = 0.07 and eps_iter 0.03
+Test accuracy on adversarial examples: 0.9535
+precision rate of the adversarial towards true is 97.91774043912999
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.07 and eps_iter 0.05
+Test accuracy on adversarial examples: 0.9515
+precision rate of the adversarial towards true is 97.71157612617256
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.1 and eps_iter 0.01
+Test accuracy on adversarial examples: 0.965
+precision rate of the adversarial towards true is 99.12380166993093
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.1 and eps_iter 0.03
+Test accuracy on adversarial examples: 0.9479
+precision rate of the adversarial towards true is 97.40232965673641
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.1 and eps_iter 0.05
+Test accuracy on adversarial examples: 0.941
+precision rate of the adversarial towards true is 96.82506958045562
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.3 and eps_iter 0.01
+Test accuracy on adversarial examples: 0.965
+precision rate of the adversarial towards true is 99.12380166993093
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.3 and eps_iter 0.03
+Test accuracy on adversarial examples: 0.9404
+precision rate of the adversarial towards true is 96.68075456138543
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.3 and eps_iter 0.05
+Test accuracy on adversarial examples: 0.9209
+precision rate of the adversarial towards true is 95.41284403669725
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.5 and eps_iter 0.01
+Test accuracy on adversarial examples: 0.965
+precision rate of the adversarial towards true is 99.12380166993093
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.5 and eps_iter 0.03
+Test accuracy on adversarial examples: 0.9404
+precision rate of the adversarial towards true is 96.68075456138543
+
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Test accuracy is 97.0100164413 percent
+checking for epsilon = 0.5 and eps_iter 0.05
+Test accuracy on adversarial examples: 0.9216
+precision rate of the adversarial towards true is 95.44376868364085
+

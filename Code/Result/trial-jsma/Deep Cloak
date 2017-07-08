@@ -1,0 +1,80 @@
+currently checking for theta 0.1 gamma 0.05 feature removal 2
+theta 0.1 gamma 0.05
+Execution time for adv. examples 151.5524 seconds
+Avg. rate of successful adv. examples 0.0067
+Avg. rate of successful robust examples 1.0000
+Avg. rate of still-correct examples 0.9444
+Avg. rate of perturbed features 0.0436
+
+currently checking for theta 0.1 gamma 0.07 feature removal 2
+theta 0.1 gamma 0.07
+Execution time for adv. examples 437.5052 seconds
+Avg. rate of successful adv. examples 0.0111
+Avg. rate of successful robust examples 1.0000
+Avg. rate of still-correct examples 0.9400
+Avg. rate of perturbed features 0.0619
+
+currently checking for theta 0.1 gamma 0.1 feature removal 2
+theta 0.1 gamma 0.1
+Execution time for adv. examples 725.9625 seconds
+Avg. rate of successful adv. examples 0.0200
+Avg. rate of successful robust examples 1.0000
+Avg. rate of still-correct examples 0.9244
+Avg. rate of perturbed features 0.0893
+
+currently checking for theta 0.1 gamma 0.1 feature removal 4
+theta 0.1 gamma 0.1
+Execution time for adv. examples 848.5546 seconds
+Avg. rate of successful adv. examples 0.0333
+Avg. rate of successful robust examples 1.0000
+Avg. rate of still-correct examples 0.8578
+Avg. rate of perturbed features 0.0893
+
+currently checking for theta 0.3 gamma 0.05 feature removal 4
+theta 0.3 gamma 0.05
+Execution time for adv. examples 149.6892 seconds
+Avg. rate of successful adv. examples 0.1222
+Avg. rate of successful robust examples 1.0000
+Avg. rate of still-correct examples 0.6911
+Avg. rate of perturbed features 0.0428
+
+currently checking for theta 0.3 gamma 0.1 feature removal 4
+theta 0.3 gamma 0.1
+Execution time for adv. examples 324.1984 seconds
+Avg. rate of successful adv. examples 0.2644
+Avg. rate of successful robust examples 1.0000
+Avg. rate of still-correct examples 0.4111
+Avg. rate of perturbed features 0.0798
+
+currently checking for theta 0.5 gamma 0.05 feature removal 4
+theta 0.5 gamma 0.05
+Execution time for adv. examples 384.5171 seconds
+Avg. rate of successful adv. examples 0.2844
+Avg. rate of successful robust examples 1.0000
+Avg. rate of still-correct examples 0.3444
+Avg. rate of perturbed features 0.0393
+
+currently checking for theta 0.5 gamma 0.1 feature removal 4
+theta 0.5 gamma 0.1
+Execution time for adv. examples 554.2724 seconds
+Avg. rate of successful adv. examples 0.4111
+Avg. rate of successful robust examples 1.0000
+Avg. rate of still-correct examples 0.2089
+Avg. rate of perturbed features 0.0585
+
+currently checking for theta 1.0 gamma 0.05 feature removal 4
+theta 1.0 gamma 0.05
+Execution time for adv. examples 635.9071 seconds
+Avg. rate of successful adv. examples 0.4311
+Avg. rate of successful robust examples 1.0000
+Avg. rate of still-correct examples 0.1444
+Avg. rate of perturbed features 0.0268
+
+currently checking for theta 1.0 gamma 0.1 feature removal 4
+theta 1.0 gamma 0.1
+Execution time for adv. examples 754.7791 seconds
+Avg. rate of successful adv. examples 0.4511
+Avg. rate of successful robust examples 1.0000
+Avg. rate of still-correct examples 0.1511
+Avg. rate of perturbed features 0.0317
+
